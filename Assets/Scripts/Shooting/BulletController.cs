@@ -36,6 +36,13 @@ public class BulletController : MonoBehaviour
 
       Destroy(gameObject);
 
+    } else if (other.CompareTag("Barrel")) {
+
+      other.GetComponent<BarrelController>().Explode();
+
+      Destroy(other.gameObject);
+      Destroy(gameObject);
+
     }
   }
 }
