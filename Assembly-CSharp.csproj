@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerDamage.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\TitleMenuManager\TitleMenu.cs" />
+    <Compile Include="Assets\Scripts\GameState\GameStateManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
