@@ -382,6 +382,7 @@
 "Assets/Scripts/Shooting/BulletController.cs"
 "Assets/Scripts/Shooting/ShootingController.cs"
 "Assets/Scripts/Zombie/HealthBar.cs"
+"Assets/Scripts/Zombie/WaveSystem.cs"
 "Assets/Scripts/Zombie/ZombieController.cs"
 -langversion:9.0
 
