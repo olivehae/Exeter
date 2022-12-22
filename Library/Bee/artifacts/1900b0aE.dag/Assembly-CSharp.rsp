@@ -328,6 +328,8 @@
 -r:"D:/UnityVersion/Unity 2021.3.16f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
 -r:"D:/UnityVersion/Unity 2021.3.16f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"D:/UnityVersion/Unity 2021.3.16f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/NavMeshComponents.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/NavMeshComponentsEditor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Animation.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Animation.Runtime.ref.dll"
@@ -379,6 +381,7 @@
 "Assets/Scripts/Player/PlayerDamage.cs"
 "Assets/Scripts/Shooting/BulletController.cs"
 "Assets/Scripts/Shooting/ShootingController.cs"
+"Assets/Scripts/Zombie/HealthBar.cs"
 "Assets/Scripts/Zombie/ZombieController.cs"
 -langversion:9.0
 

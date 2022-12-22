@@ -39,11 +39,12 @@
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Zombie\ZombieController.cs" />
      <Compile Include="Assets\Scripts\Shooting\BulletController.cs" />
+     <Compile Include="Assets\Scripts\Barrel\BarrelController.cs" />
      <Compile Include="Assets\Scripts\Player\CameraController.cs" />
      <Compile Include="Assets\Scripts\Shooting\ShootingController.cs" />
+     <Compile Include="Assets\Scripts\Zombie\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerDamage.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
-     <Compile Include="Assets\Scripts\Barrel\BarrelController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\UnityVersion\Unity 2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -811,6 +812,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{c7a16fe9-4a83-6cbd-50bf-927794d629b4}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{0c4bb7c4-da47-bdcb-1c57-ee7253a530b4}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

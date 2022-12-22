@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     // Movement speed of the player
     public float speed = 5.0f;
 
+
+    public HealthBar healthBar;
     // Reference to the player's Rigidbody2D component
     private Rigidbody2D rb;
 
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
   void Start()
     {
         health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
 
         // Get references to the Rigidbody2D, Animator, and Shooting components
         rb = GetComponent<Rigidbody2D>();
@@ -63,6 +66,7 @@ public class PlayerController : MonoBehaviour
     {
         // Reduce the player's health by the specified amount
         health -= damage;
+        healthBar.SetHealth(health);
 
         // If the player's health is zero or less, end the game
         if (health <= 0)
