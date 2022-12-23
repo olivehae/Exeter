@@ -8,14 +8,14 @@ public class WaveSystem : MonoBehaviour
     public GameObject zombiePrefab;
     public Transform playerLocation;
 
+    public Transform topWall;
+    public Transform leftWall;
+    public Transform rightWall;
+    public Transform bottomWall;
+    public Transform setSpawn;
     public int waveAmount;
-  // Start is called before the first frame update
 
-    private NavMeshTriangulation triangulation;
-    void Start()
-    {
-        triangulation = NavMesh.CalculateTriangulation();
-    }
+    void Start() {}
 
     // Update is called once per frame
     void Update()
@@ -27,17 +27,23 @@ public class WaveSystem : MonoBehaviour
         {
             for (int i = 0; i < waveAmount; i++)
             {
-                Vector3 spawnPosition = new Vector3(playerLocation.position.x + Random.Range(-10, 10), 0, playerLocation.position.x + Random.Range(-10, 10));
-                GameObject zombie = Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
-                zombie.tag = "Zombie";
-                
-                int vertex = Random.Range(0, triangulation.vertices.Length);
-                NavMeshHit Hit;
-                if (NavMesh.SamplePosition(triangulation.vertices[vertex], out Hit, 2f, 1)){
-                    zombie.GetComponent<NavMeshAgent>().Warp(Hit.position);
-                    zombie.GetComponent<NavMeshAgent>().enabled = true;
-                    zombie.GetComponent<ZombieController>().player = playerLocation;
+                Vector3 spawnPosition;
+                float x, y;
+
+                if (!setSpawn) {
+                    x = Random.Range(leftWall.position.x, rightWall.position.x);
+                    y = Random.Range(bottomWall.position.y, rightWall.position.y);
+                } else {
+                    x = Random.Range(setSpawn.position.x - 2, setSpawn.position.x + 2);
+                    y = Random.Range(setSpawn.position.y - 2, setSpawn.position.y + 2);
                 }
+
+                spawnPosition = new Vector3(x, y, 0);
+                GameObject zombie = Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
+
+                zombie.tag = "Zombie";
+                zombie.GetComponent<NavMeshAgent>().enabled = true;
+                zombie.GetComponent<ZombieController>().player = playerLocation;
             }
         }
     }
