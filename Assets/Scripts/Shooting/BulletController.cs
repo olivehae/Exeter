@@ -11,7 +11,7 @@ public class BulletController : MonoBehaviour
   public float speed = 4.5f;
 
   // The lifetime of the bullet
-  public float lifetime = 15.0f;
+  public float lifetime = 5.0f;
 
   void Start() {
     Destroy(gameObject, lifetime);

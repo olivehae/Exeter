@@ -9,9 +9,6 @@ public class ShootingController : MonoBehaviour
 
   public GameObject player;
 
-  // The speed of the bullet
-  public float bulletSpeed = 10.0f;
-
   // The rate at which the player can shoot
   public float fireRate = 0.0f;
 
@@ -33,7 +30,7 @@ public class ShootingController : MonoBehaviour
 
  
       // Set the bullet's velocity based on the player's rotation
-      // bullet.GetComponent<Rigidbody2D>().velocity = transform.right * bulletSpeed;
+      // bullet.GetComponent<Rigidbody2D>().speed = transform.right * bulletSpeed;
 
 
       // Calculate the next time the player can shoot
